@@ -1,0 +1,31 @@
+.info-card {
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    width: fit-content;
+    border-radius: 4px;
+
+    div {
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: rgb(95, 94, 94);
+            margin-top: 20px;
+        }
+
+        &:first-child {
+            h3 {
+                margin-top: 0;
+            }
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 2px;
+
+            span {
+                color: grey;
+                font-weight: 500;
+            }
+        }
+    }
+}

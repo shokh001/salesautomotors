@@ -1,0 +1,85 @@
+.sidebar {
+    background-color: #211c52;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 56px;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    &-logo, &-more {
+        margin: 6px;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &-lists {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        li { 
+            position: relative;            
+            span {
+                position: absolute;
+                left: 100%;
+                opacity: 0;
+                top: 16px;
+                background-color: #000;
+                color: #fff;
+                padding: 4px;
+                border-radius: 4px;
+                font-size: 12px;
+                z-index:99999;
+                line-height: 16px;
+            }
+
+            a {
+                margin: 6px;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 6px;
+                color: #fff;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &:hover {
+                    background-color: #6150e1;
+                }
+
+                &.active {
+                    background-color: #6150e1;
+                }
+            } 
+            
+            &:hover {
+                span {
+                    opacity: 1;
+                }
+            } 
+        }
+    }
+}
